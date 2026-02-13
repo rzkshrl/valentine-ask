@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Valentine Letter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ensure the page can scroll even if external CSS restricts it
+    <style>
+      html, body {
+        height: auto !important;
+        min-height: 100% !important;
+        overflow: auto !important;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /* make containers allow natural flow and scrolling */
+      #envelope-container,
+      #letter-container {
+        position: static !important;
+        overflow: visible !important;
+      }
+
+      /* optional: keep the letter content readable and allow it to grow */
+      .letter-window {
+        max-width: 900px;
+        margin: 0 auto;
+        padding-bottom: 60px;
+      }
+    </style> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Pixelify+Sans:wght@400..700&display=swap" 
+      rel="stylesheet" 
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Envelope Screen -->
+    <div id="envelope-container">
+      <img src="envelope.png" alt="Envelope" id="envelope" />
+      <p>♡ open this letter! ♡</p>
+    </div>
+
+    <!-- Letter Screen -->
+    <div id="letter-container" style="display: none;">
+      <div class="letter-window">
+        <h1 id="letter-title">will you be my valentine?</h1>
+
+        <img src="cat_heart.gif" class="cat" id="letter-cat"/>
+
+        <div class="buttons" id="letter-buttons">
+          <img src="yes.png" class="btn yes-btn" alt="Yes">
+
+          <div class="no-wrapper">
+            <img src="no.png" class="btn no-btn" alt="No">
+          </div>
+
+        </div>
+
+        <p id="final-text" class="final-text" style="display: none;">
+          <strong>Valentine Date! :</strong> <br />
+          ⏰arrived around 16.00pm <br />
+          👔 pink outfit like this, choose :<br />
+          (tap to change color) :<br />
+          <br />
+              <img
+                src="1.png"
+                class="outfit-image outfit-toggle"
+                alt="tap to change color"
+                title="tap to change color"
+                role="button"
+                tabindex="0"
+                data-alt-src="2.png"
+                data-selected="true"
+                style="width:200px; height:200px; object-fit:cover; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease; transform:scale(1.02); box-shadow:0 8px 20px rgba(0,0,0,0.25);"
+                onclick="(function(el){
+                  var a = el.getAttribute('src');
+                  var b = el.getAttribute('data-alt-src');
+                  el.setAttribute('src', b);
+                  el.setAttribute('data-alt-src', a);
+                  el.dataset.selected = (el.dataset.selected === 'true') ? 'false' : 'true';
+                  if (el.dataset.selected === 'true') {
+                    el.style.transform = 'scale(1.02)';
+                    el.style.boxShadow = '0 8px 20px rgba(0,0,0,0.25)';
+                  } else {
+                    el.style.transform = 'scale(1)';
+                    el.style.boxShadow = 'none';
+                  }
+                })(this)"
+                onkeydown="if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  (function(el){
+                    var a = el.getAttribute('src');
+                    var b = el.getAttribute('data-alt-src');
+                    el.setAttribute('src', b);
+                    el.setAttribute('data-alt-src', a);
+                    el.dataset.selected = (el.dataset.selected === 'true') ? 'false' : 'true';
+                    if (el.dataset.selected === 'true') {
+                      el.style.transform = 'scale(1.02)';
+                      el.style.boxShadow = '0 8px 20px rgba(0,0,0,0.25)';
+                    } else {
+                      el.style.transform = 'scale(1)';
+                      el.style.boxShadow = 'none';
+                    }
+                  })(this);
+                }"
+                onmouseenter="this.style.transform='scale(1.02)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.28)';"
+                onmouseleave="if (this.dataset.selected === 'true') { this.style.transform='scale(1.02)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.25)'; } else { this.style.transform='scale(1)'; this.style.boxShadow='none'; }"
+              /> <img
+                src="3.png"
+                class="outfit-image outfit-toggle"
+                alt="tap to change color"
+                title="tap to change color"
+                role="button"
+                tabindex="0"
+                data-alt-src="4.png"
+                data-selected="true"
+                style="width:200px; height:200px; object-fit:cover; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease; transform:scale(1.02); box-shadow:0 8px 20px rgba(0,0,0,0.25);"
+                onclick="(function(el){
+                  var a = el.getAttribute('src');
+                  var b = el.getAttribute('data-alt-src');
+                  el.setAttribute('src', b);
+                  el.setAttribute('data-alt-src', a);
+                  el.dataset.selected = (el.dataset.selected === 'true') ? 'false' : 'true';
+                  if (el.dataset.selected === 'true') {
+                    el.style.transform = 'scale(1.02)';
+                    el.style.boxShadow = '0 8px 20px rgba(0,0,0,0.25)';
+                  } else {
+                    el.style.transform = 'scale(1)';
+                    el.style.boxShadow = 'none';
+                  }
+                })(this)"
+                onkeydown="if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  (function(el){
+                    var a = el.getAttribute('src');
+                    var b = el.getAttribute('data-alt-src');
+                    el.setAttribute('src', b);
+                    el.setAttribute('data-alt-src', a);
+                    el.dataset.selected = (el.dataset.selected === 'true') ? 'false' : 'true';
+                    if (el.dataset.selected === 'true') {
+                      el.style.transform = 'scale(1.02)';
+                      el.style.boxShadow = '0 8px 20px rgba(0,0,0,0.25)';
+                    } else {
+                      el.style.transform = 'scale(1)';
+                      el.style.boxShadow = 'none';
+                    }
+                  })(this);
+                }"
+                onmouseenter="this.style.transform='scale(1.02)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.28)';"
+                onmouseleave="if (this.dataset.selected === 'true') { this.style.transform='scale(1.02)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.25)'; } else { this.style.transform='scale(1)'; this.style.boxShadow='none'; }"
+              /> <br /> <br />
+              <img
+                src="5.png"
+                class="outfit-image outfit-toggle"
+                alt="tap to change color"
+                title="tap to change color"
+                role="button"
+                tabindex="0"
+                data-alt-src="6.png"
+                data-selected="true"
+                style="width:200px; height:200px; object-fit:cover; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease; transform:scale(1.02); box-shadow:0 8px 20px rgba(0,0,0,0.25);"
+                onclick="(function(el){
+                  var a = el.getAttribute('src');
+                  var b = el.getAttribute('data-alt-src');
+                  el.setAttribute('src', b);
+                  el.setAttribute('data-alt-src', a);
+                  el.dataset.selected = (el.dataset.selected === 'true') ? 'false' : 'true';
+                  if (el.dataset.selected === 'true') {
+                    el.style.transform = 'scale(1.02)';
+                    el.style.boxShadow = '0 8px 20px rgba(0,0,0,0.25)';
+                  } else {
+                    el.style.transform = 'scale(1)';
+                    el.style.boxShadow = 'none';
+                  }
+                })(this)"
+                onkeydown="if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  (function(el){
+                    var a = el.getAttribute('src');
+                    var b = el.getAttribute('data-alt-src');
+                    el.setAttribute('src', b);
+                    el.setAttribute('data-alt-src', a);
+                    el.dataset.selected = (el.dataset.selected === 'true') ? 'false' : 'true';
+                    if (el.dataset.selected === 'true') {
+                      el.style.transform = 'scale(1.02)';
+                      el.style.boxShadow = '0 8px 20px rgba(0,0,0,0.25)';
+                    } else {
+                      el.style.transform = 'scale(1)';
+                      el.style.boxShadow = 'none';
+                    }
+                  })(this);
+                }"
+                onmouseenter="this.style.transform='scale(1.02)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.28)';"
+                onmouseleave="if (this.dataset.selected === 'true') { this.style.transform='scale(1.02)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.25)'; } else { this.style.transform='scale(1)'; this.style.boxShadow='none'; }"
+              /> <img
+                src="7.png"
+                class="outfit-image outfit-toggle"
+                alt="tap to change color"
+                title="tap to change color"
+                role="button"
+                tabindex="0"
+                data-alt-src="7.png"
+                data-selected="true"
+                style="width:200px; height:200px; object-fit:cover; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease; transform:scale(1.02); box-shadow:0 8px 20px rgba(0,0,0,0.25);"
+                onclick="(function(el){
+                  var a = el.getAttribute('src');
+                  var b = el.getAttribute('data-alt-src');
+                  el.setAttribute('src', b);
+                  el.setAttribute('data-alt-src', a);
+                  el.dataset.selected = (el.dataset.selected === 'true') ? 'false' : 'true';
+                  if (el.dataset.selected === 'true') {
+                    el.style.transform = 'scale(1.02)';
+                    el.style.boxShadow = '0 8px 20px rgba(0,0,0,0.25)';
+                  } else {
+                    el.style.transform = 'scale(1)';
+                    el.style.boxShadow = 'none';
+                  }
+                })(this)"
+                onkeydown="if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  (function(el){
+                    var a = el.getAttribute('src');
+                    var b = el.getAttribute('data-alt-src');
+                    el.setAttribute('src', b);
+                    el.setAttribute('data-alt-src', a);
+                    el.dataset.selected = (el.dataset.selected === 'true') ? 'false' : 'true';
+                    if (el.dataset.selected === 'true') {
+                      el.style.transform = 'scale(1.02)';
+                      el.style.boxShadow = '0 8px 20px rgba(0,0,0,0.25)';
+                    } else {
+                      el.style.transform = 'scale(1)';
+                      el.style.boxShadow = 'none';
+                    }
+                  })(this);
+                }"
+                onmouseenter="this.style.transform='scale(1.02)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.28)';"
+                onmouseleave="if (this.dataset.selected === 'true') { this.style.transform='scale(1.02)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.25)'; } else { this.style.transform='scale(1)'; this.style.boxShadow='none'; }"
+              /> <br /><br />
+            📍photobooth date, choose below : <br />
+
+            <label class="check-item">
+              <input type="checkbox" class="check-input" id="place1" name="places" value="cafe-light" />
+              <a href="https://maps.app.goo.gl/1vK6dkTF3DgDNh6F6" class="link-place" target="_blank" rel="noopener">cafe light space UMS</a>
+              <label class="desc-text">(Photostrip.co.id - cafe)</label> <br />
+              <a href="https://vt.tiktok.com/ZSmjwy5jd/" class="link-tiktok" target="_blank" rel="noopener">Tiktok</a>
+            </label>
+
+            <label class="check-item">
+              <input type="checkbox" class="check-input" id="place2" name="places" value="anak-panah" />
+              <a href="https://maps.app.goo.gl/5BP9MCbqmKSauWi77" class="link-place" target="_blank" rel="noopener">anak panah kopi bizz Keprabon</a>
+              <label class="desc-text">(Snapobox - cafe)</label> <br />
+              <a href="https://vt.tiktok.com/ZSmjwP3Fa/" class="link-tiktok" target="_blank" rel="noopener">Tiktok</a>
+            </label>
+
+            <label class="check-item">
+              <input type="checkbox" class="check-input" id="place3" name="places" value="mata-lokal" />
+              <a href="https://maps.app.goo.gl/TzXWDujnbvqHJSTv9" class="link-place" target="_blank" rel="noopener">mata lokal lokananta bloc</a>
+              <label class="desc-text">(Photomatics - only photobooth)</label>  <br />
+              <a href="https://vt.tiktok.com/ZSmjwfdaD/" class="link-tiktok" target="_blank" rel="noopener">Tiktok</a>
+            </label> <br />
+
+            🍛 dinner disscusable, we can eat at cafe or buy some penyetan outside <br />
+
+            🗒️ valentine gifting session, giving "rainbow color" gift each other, and quality time, take a good photos of two, full of love♡ <br />  
+          <strong>❤️💌🐨🐻
+        </p>
+          
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
