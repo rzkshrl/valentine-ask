@@ -57,6 +57,10 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding-bottom: 60px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 @keyframes pulse {
@@ -187,6 +191,10 @@ p {
 
 .desc-text {
   font-size: 15px;
+}
+
+.envelope-text {
+  font-size: 19.5px;
 }
 
 .link-tiktok {
